@@ -1,19 +1,15 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
-import { NotFoundContainer, NotFoundPage } from "styles";
+import BackButton from "./BackButton";
+
+import { NotFoundContainer } from "styles";
 
 const NotFound = () => {
-  const navigate = useNavigate();
-
-  const onHomeButtonClick = () => {
-    navigate("/");
-  };
 
   return (
     <NotFoundContainer>
-      <NotFoundPage>Movie Not Found</NotFoundPage>
-      <button onClick={onHomeButtonClick}>Return to Home Page</button>
+      <BackButton />
+      <h2>Movie Not Found...</h2>
     </NotFoundContainer>
   )
 };

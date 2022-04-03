@@ -10,8 +10,42 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: black;
+    color: white;
+  }
+
+  ul {
+    list-style: none;
   }
 `;
+
+export const StyledHeader = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+`
+
+export const Categories = styled.button`
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: ${props => props.active ? "white" : "#777"};
+  background-color: ${props => props.active ? "#4F6CFF" : "none"};
+
+  &:hover {
+    color: black;
+  }
+`
+
+export const Heading = styled.span`
+  color: #4F6CFF;
+`
+
+export const List = styled.ul`
+  display: flex;
+`
 
 export const MovieContainer = styled.div`
   display: flex;
@@ -51,8 +85,8 @@ export const MovieImage = styled.img`
 `;
 
 export const MovieOverlay = styled.div`
-  word-wrap: break-word;
   color: white;
+  word-wrap: break-word;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -125,7 +159,6 @@ export const MovieDetailsWrapper = styled.div`
 `;
 
 export const MovieDetail = styled.div`
-  color: white;
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,1));
   padding: 8px;
 
@@ -151,7 +184,7 @@ export const MovieDescription = styled.p`
   font-size: 18px;
 `;
 
-export const BackButton = styled.button`
+export const MoviesButton = styled.button`
   width: auto;
   display: flex;
   justify-content: center;
@@ -175,7 +208,6 @@ export const BackArrow = styled.img`
   
   export const ButtonText = styled.span`
   vertical-align: middle;
-  color: white;
   font-weight: 700;
   font-size: 16px;
   transition: 0.3s ease-in-out;
@@ -192,11 +224,21 @@ export const NotFoundContainer = styled.div`
   margin-top: 50px;
 `
 
-export const NotFoundPage = styled.h2`
-  color: white;
+export const LoadingMessage = styled.h2`
+  text-align: center;
 `
 
-export const LoadingMessage = styled.h2`
-  color: white;
+export const StyledFooter = styled.footer`
   text-align: center;
+  padding: 30px 0;
+  font-size: 15px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+`
+
+export const MovieDbLogo = styled.img`
+  margin-left: 10px;
+  width: 125px;
 `

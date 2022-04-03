@@ -1,9 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
+import Footer from "components/Footer";
 import MovieList from "components/MovieList";
 import MovieDetails from "components/MovieDetails";
 import NotFound from "components/NotFound";
+
 import { GlobalStyle } from "styles";
 
 export const App = () => {  
@@ -18,6 +20,7 @@ export const App = () => {
           <Route path="*" element={<Navigate to={"/404"} replace />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </>
   );
 };
