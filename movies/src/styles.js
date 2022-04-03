@@ -81,12 +81,14 @@ export const MovieTitle = styled.h1`
 export const Poster = styled.img`
   border: solid 5px white;
   width: 200px;
+  display: none;
 
   @media (orientation: landscape) {
     width: 150px;
   }
 
   @media (min-width: 1024px) {
+    display: block;
     width: 300px;
   }
 `;
@@ -113,7 +115,6 @@ export const MovieDetailsWrapper = styled.div`
   bottom: 0;
 
   @media (orientation: landscape) {
-    padding: 10px;
     flex-direction: row;
     align-items: flex-end;
   }
@@ -148,13 +149,6 @@ export const Rating = styled.span`
 
 export const MovieDescription = styled.p`
   font-size: 18px;
-  height: 100px;
-  overflow: scroll;
-
-  @media (min-width: 1024px) {
-    height: auto;
-    overflow: hiddden;
-  }
 `;
 
 export const BackButton = styled.button`
@@ -192,3 +186,17 @@ export const BackArrow = styled.img`
     }
   }
 `;
+
+export const NotFoundContainer = styled.div`
+  text-align: center;
+  margin-top: 50px;
+`
+
+export const NotFoundPage = styled.h2`
+  color: white;
+`
+
+export const LoadingMessage = styled.h2`
+  color: white;
+  text-align: center;
+`
