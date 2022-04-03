@@ -1,4 +1,4 @@
-import { KEY } from "config";
+import { KEY } from "../config";
 
 const API_KEY = KEY || process.env.API_KEY;
 
