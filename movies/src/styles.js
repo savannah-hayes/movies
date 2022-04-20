@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 
+const FlexDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -11,11 +16,11 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     background-color: black;
     color: white;
-  }
+  };
 
   ul {
     list-style: none;
-  }
+  };
 `;
 
 export const StyledHeader = styled.header`
@@ -23,7 +28,7 @@ export const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 0 15px;
-`
+`;
 
 export const Categories = styled.button`
   cursor: pointer;
@@ -36,25 +41,22 @@ export const Categories = styled.button`
 
   &:hover {
     color: black;
-  }
-`
+  };
+`;
 
 export const Heading = styled.span`
   color: #4F6CFF;
-`
+`;
 
 export const List = styled.ul`
   display: flex;
-`
+`;
 
-export const MovieContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-
+export const MovieContainer = styled(FlexDiv)`
   @media (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
-  }
+  };
 `;
 
 export const MovieWrapper = styled.div`
@@ -63,11 +65,11 @@ export const MovieWrapper = styled.div`
 
   @media (min-width: 768px) {
     width: 50%;
-  }
+  };
 
   @media (min-width: 1024px) {
     width: 25%;
-  }
+  };
 `;
 
 export const MovieImage = styled.img`
@@ -77,19 +79,17 @@ export const MovieImage = styled.img`
 
   @media (orientation: landscape) {
     height: 800px;
-  }
+  };
 
   @media (min-width: 1024px) {
     height: 500px;
-  }
+  };
 `;
 
-export const MovieOverlay = styled.div`
+export const MovieOverlay = styled(FlexDiv)`
   color: white;
   word-wrap: break-word;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
   justify-content: flex-end;
   position: absolute;
   top: 0;
@@ -141,9 +141,7 @@ export const MovieDetailsContainer = styled.div`
   }
 `;
 
-export const MovieDetailsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+export const MovieDetailsWrapper = styled(FlexDiv)`
   align-items: flex-start;
   position: absolute;
   bottom: 0;
@@ -203,8 +201,8 @@ export const BackArrow = styled.img`
     &:hover {
       margin-right: 5px;
     }
-  }
-`
+  };
+`;
   
   export const ButtonText = styled.span`
   vertical-align: middle;
@@ -216,17 +214,17 @@ export const BackArrow = styled.img`
     &:hover {
       margin-left: 5px;
     }
-  }
+  };
 `;
 
 export const NotFoundContainer = styled.div`
   text-align: center;
   margin-top: 50px;
-`
+`;
 
 export const LoadingMessage = styled.h2`
   text-align: center;
-`
+`;
 
 export const StyledFooter = styled.footer`
   text-align: center;
@@ -235,10 +233,10 @@ export const StyledFooter = styled.footer`
 
   @media (min-width: 768px) {
     font-size: 16px;
-  }
-`
+  };
+`;
 
 export const MovieDbLogo = styled.img`
   margin-left: 10px;
   width: 125px;
-`
+`;

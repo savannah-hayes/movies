@@ -16,15 +16,20 @@ import {
 
 const MovieDetails = () => {
   const [movies, setMovies] = useState({});
-  const { movieId } = useParams();
   const [loading, setLoading] = useState(true);
 
+  const { movieId } = useParams();
+
   useEffect(() => {
-    fetch(SINGLE_MOVIE_URL(movieId))
-      .then((res) => res.json())
-      .then((data) => setMovies(data))
-      .catch(error => console.error(error))
-      .finally(setLoading(false))
+    const fetchData = async () => {
+      const response = await fetch(SINGLE_MOVIE_URL(movieId));
+      const json = await response.json();
+      setMovies(json);
+    };
+
+    setLoading(false);
+    fetchData()
+    .catch(error => console.error(error))
   }, [movieId]);
 
   if (loading) {

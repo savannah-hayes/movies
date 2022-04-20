@@ -12,7 +12,7 @@ const BackButton = () => {
 
   return (
     <MoviesButton onClick={onMoviesButtonClick}>
-      <BackArrow src="/images/arrow.png" alt="back arrow icon"></BackArrow>
+      <BackArrow src="/images/arrow.png" alt="back arrow"></BackArrow>
       <ButtonText>Movies</ButtonText>
     </MoviesButton>
   )

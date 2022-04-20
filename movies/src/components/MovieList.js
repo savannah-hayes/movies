@@ -10,7 +10,7 @@ import { MovieContainer, MovieWrapper, MovieImage, MovieOverlay, MovieTitle } fr
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [category, setCategory] = useState("now_playing")
+  const [category, setCategory] = useState("now_playing");
 
   useEffect(() => {
     const firstFetch = fetch(BASE_URL1(category));
@@ -25,7 +25,8 @@ const MovieList = () => {
         return Promise.all(arrayOfResponses);
       })
       .then(data => {
-        setMovies(data[0].results
+        setMovies(
+          data[0].results
           .concat(data[1].results)
           .concat(data[2].results)
           .concat(data[3].results)

@@ -34,7 +34,7 @@ const Header = ({ setCategory }) => {
         </List>
       </nav>
     </StyledHeader>
-  )
-}
+  );
+};
 
 export default Header;
